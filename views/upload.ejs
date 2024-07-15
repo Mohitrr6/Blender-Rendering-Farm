@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Project</title>
+    <link rel="stylesheet" href="sytlesheets/upload.css">
+</head>
+
+<body>
+    <div class="upload">
+        <div class="bg_img">
+            <img src="assets/images/upload background.jpg">
+        </div>
+        <h1>Upload Project</h1>
+
+        <div class="new_proj_form">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <div class="file">
+                    <label class="upload_file" for="up_file">Upload file</label>
+                    <input class="f_int" type="file" required name="blend_file"><br>
+                </div>
+                <div class="frame">
+                    <label class="s_frame" for="start_frame">Starting Frame</label>
+                    <input type="text" class="s_int" required name="first_frame">
+                    <label class="e_frame" for="end_frame">Ending Frame</label>
+                    <input type="text" class="e_int" required name="last_frame"><br>
+                </div>
+                <div class="engine">
+                    <label class="render_engine" for="ren_engine">Rendering Engine</label>
+                    <input type="radio" class="cycle" name="rend_engine" values="cyc" required>
+                    <label for="cycle" class="cyc_eng">CYCLE</label>
+                    <input type="radio" class="eeve" name="rend_engine" values="eve" required>
+                    <label for="eevee" class="eev_eng">EEVEE</label><br>
+                </div>
+                <div class="output">
+
+                    <label class="out_file" for="output">Project Tag</label>
+                    <input type="text" class="out_name" name="proj_tag" required>
+                </div>
+
+                <button class="add_proj_btn" onclick="createNewDiv()">
+                    <p>Add Project</p>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="./new_div.js" type="text/javascript"></script>
+</body>
+
+</html>
